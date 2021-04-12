@@ -1,0 +1,38 @@
+<!-- Tutorial seguido en: https://www.youtube.com/watch?v=BU8ddY7c6xw -->
+<div class="main">
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a class="nav-link" (click)="onClick(home)"> Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="onClick(products)"> Products </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="onClick(about)"> About </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="onClick(contact)"> Contact </a>
+            </li>
+        </ul>
+        <progress value="0" max="100"></progress>
+    </nav>
+
+    <div class="content">
+        <section #home>
+            <h1>Home</h1>
+        </section>
+        <section #products>
+            <h1>Products</h1>
+        </section>
+        <section #about>
+            <h1>About</h1>
+        </section>
+        <section #contact>
+            <h1>Contact</h1>
+        </section>
+        <button class="up" [ngClass]="{visible: reachedTheEnd, hidden: !reachedTheEnd}" (click)="onClick(home)">
+          <svg><use href="./assets/icon.svg#icon-chevron-with-circle-up"></use></svg>
+        </button>
+    </div>
+</div>

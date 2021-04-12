@@ -1,0 +1,87 @@
+progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    border: none;
+    background: transparent;
+}
+
+progress::-webkit-progress-bar {
+    background: #eee;
+}
+
+progress::-webkit-progress-value {
+    background: #2d75fa;
+    background-attachment: fixed;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #fff;
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+    }
+    .nav-item {
+        list-style: none;
+    }
+    .nav-link {
+        text-decoration: none;
+        color: #0a0a0a;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+}
+
+.content {
+    margin-top: 80px;
+    section {
+        background-color: #f7f7f7;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section#home {
+        height: calc(100vh - 80px);
+    }
+}
+
+button.up {
+    position: fixed;
+    display: inline-block;
+    right: 5%;
+    bottom: 5%;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+svg {
+    width: inherit;
+    height: inherit;
+    fill: #2c75f9;
+}
